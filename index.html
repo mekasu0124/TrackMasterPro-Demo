@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Master Pro</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Track Master Pro</h1>
+      <p>Your Ultimate Todo App</p>
+    </header>
+
+    <main>
+      <button id="openModalBtn" onclick="openModal()">Add New Task</button>
+      
+      <div id="todoModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-title-content">
+            <h3 id="modal-title">
+              Create A New Todo
+            </h3>
+          </div>
+
+          <div class="modal-inputs">
+            <div class="row">
+              <label for="title" id="modal-label">The Title</label>
+              <input type="text" id="new-todo-title" name="title" />
+            </div>
+
+            <div class="row">
+              <label for="task" id="modal-label">The Task</label>
+              <input type="text" id="new-todo" name="task" />
+            </div>
+
+            <div class="row">
+              <label for="date" id="modal-label">The Date</label>
+              <input type="date" id="new-todo-date" name="date" />
+            </div>
+
+            <div class="row">
+              <label for="priority-level" id="modal-label">The Priority</label>
+              <input type="radio" id="new-todo-priority" name="priority-level" checked>Low</input>
+              <input type="radio" id="new-todo-priority" name="priority-level">Medium</input>
+              <input type="radio" id="new-todo-priority" name="priority-level">High</input>
+            </div>
+          </div>
+
+          <div class="modal-buttons">
+            <button onclick="closeModal()" class="close-btn" id="closeModalBtn">
+              Close
+            </button>
+
+            <button onclick="addTodo()" class="open-btn">
+              Add Task
+            </button>
+          </div>
+
+          <!--  -->
+        </div>
+      </div>
+
+      <div id="todo-list" class="todo-list"></>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Task Master Pro. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
