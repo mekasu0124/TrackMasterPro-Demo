@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Inkfree";
+  src: url(./fonts/Inkfree.ttf);
+}
+
+:root {
+  --bg: #221b18;
+  --bg2: #523c2c;
+  --bd: #6c6257;
+  --btn-hover: #a2784e;
+  --fg: #9ca09d;
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--bg2);
+  border-bottom: 2px solid var(--bd);
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  color: var(--fg);
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+}
+
+#app-icon {
+  width: 250px;
+  height: 90px;
+  border-radius: 20px;
+}
+
+#title, 
+#sub-title,
+#nav-link {
+  font-family: "Inkfree";
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  color: var(--fg);
+}
+
+#sub-title {
+  font-size: 1.2rem;
+  margin-top: -10px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#nav-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+#nav-link:hover {
+  text-decoration: underline;
+}
+
+.body-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  height: 600px;
+  padding: 2rem;
+  margin-top: 20px;
+  border: 3px solid var(--bd);
+  border-radius: 10px;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.body-content::-webkit-scrollbar,
+.intro::-webkit-scrollbar,
+.about::-webkit-scrollbar,
+.how-to::-webkit-scrollbar,
+.iss::-webkit-scrollbar,
+.license::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--bg2);
+  border: 1px solid var(--bd);
+}
+
+.body-content::-webkit-scrollbar-track,
+.intro::-webkit-scrollbar-track,
+.about::-webkit-scrollbar-track,
+.how-to::-webkit-scrollbar-track,
+.iss::-webkit-scrollbar-track,
+.license::-webkit-scrollbar-track {
+  background-color: var(--bg2);
+  border: 1px solid var(--bd);
+}
+
+.body-content::-webkit-scrollbar-thumb,
+.intro::-webkit-scrollbar-thumb,
+.about::-webkit-scrollbar-thumb,
+.how-to::-webkit-scrollbar-thumb,
+.iss::-webkit-scrollbar-thumb::-webkit-scrollbar-track,
+.license::-webkit-scrollbar-thumb {
+  background-color: var(--btn-hover);
+  border: 1px solid var(--bg);
+  border-radius: 10px;
+}
+
+.body-content::-webkit-scrollbar-thumb:hover,
+.intro::-webkit-scrollbar-thumb:hover,
+.about::-webkit-scrollbar-thumb:hover,
+.how-to::-webkit-scrollbar-thumb:hover,
+.iss::-webkit-scrollbar-thumb:hover,
+.license::-webkit-scrollbar-thumb:hover {
+  background-color: var(--btn-hover);
+  border-color: 1px solid var(--bd);
+}
+
+.intro,
+.about,
+.how-to,
+.iss,
+.license {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg2);
+  border: 1px solid var(--btn-hover);
+  border-radius: 10px;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-family: "Inkfree", cursive;
+  width: 95%;
+  overflow-y: auto;
+}
+
+.intro summary,
+.about summary,
+.how-to summary,
+.iss summary,
+.license summary {
+  font-family: "Inkfree", cursive;
+  color: var(--fg);
+  font-size: 1.4rem;
+  cursor:pointer;
+}
+
+.intro p,
+.about p,
+.how-to p,
+.iss p,
+.license p {
+  font-family: "Inkfree", cursive;
+  color: var(--fg);
+  font-size: 1.2rem;
+}
